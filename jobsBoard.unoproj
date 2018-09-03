@@ -1,0 +1,13 @@
+{
+  "RootNamespace":"jobsBoard",
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Includes": [
+    "*",
+    "Modules/*.js:Bundle",
+   
+  ]
+}
+

@@ -1,0 +1,77 @@
+<Page ux:Class="HomePage">
+	<Router ux:Dependency="router" />
+	<JavaScript File="HomePage.js" />
+<iOS.StatusBarConfig Style="Light" />
+	<EdgeNavigator>
+		<Panel ux:Name="sidebar" Edge="Left" Width="100%" Margin="0,0,56,0" Background="#ecf0f1">
+			<Shadow ux:Name="shadow" Angle="180" Distance="8" Size="16" Color="#0000" />
+			<ActivatingAnimation>
+				<Change shadow.Color="#0004" />
+				<Change sidebarFade.Opacity="1" />
+			</ActivatingAnimation>
+		<StackPanel Margin="0,55">
+		<jobs.Text Alignment="HorizontalCenter" FontSize="22" Color="{getColor}">Job Categories</jobs.Text>
+				<SmallUnderline />
+		<ScrollView ClipToBounds="true">
+			<StackPanel Margin="0,20,20,20">
+				<Each Items="{category}">
+					
+					<DockPanel Margin="20,3,3,3">
+						<Circle Color="{getColor}" Dock="Left" Width="46" Height="40">
+						
+							<jobs.Text Alignment="HorizontalCenter" MaxLength="1" Margin="0,10" FontSize="20" Color="White">{= toUpper({name})}</jobs.Text>
+					
+						</Circle>
+						<DrawerText FontSize="17">{name}</DrawerText>
+
+					</DockPanel>
+				</Each>
+
+				
+				
+			</StackPanel>
+		</ScrollView>
+		</StackPanel>
+		</Panel>
+		
+		<DockPanel Color="#ecf0f1">
+			<Rectangle ux:Name="sidebarFade" Layer="Overlay" Color="#0005" Opacity="0" HitTestMode="None" />
+			<StackPanel Dock="Top" Color="#37474F">
+				<Shadow Size="6" Distance="4" />
+				<StatusBarBackground />
+				<Panel Height="36">
+					<Grid Columns="0.5*,4.5*"/>
+
+					<Hamburger Alignment="Left" Margin="0,0,0,30">
+						<Clicked>
+							<NavigateToggle Target="sidebar" />
+						</Clicked>
+					</Hamburger>
+					<jobs.Text Alignment="HorizontalCenter" FontSize="20" Color="White" >Latest Job Listing</jobs.Text>
+			
+				</Panel>
+			</StackPanel>
+		<ScrollView ClipToBounds="true">
+			<StackPanel>
+				<Each Items="{latest_jobs}">
+				<Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gotoJob}">				
+					<DockPanel Margin="17,3,17,3" Background="White">								
+						
+						<Circle Color="#935116" Dock="Left" Width="46" Height="40" Margin="10,2,2,2" >
+						
+							<jobs.Text Alignment="HorizontalCenter" MaxLength="1" Margin="0,10" FontSize="17" Color="White">{= toUpper({title})}</jobs.Text>
+					
+						</Circle>
+				<DrawerText FontSize="18" Font="MankN" Color="#000000" MaxLength="70" Dock="Top" Margin="10,26,0,0">{title}</DrawerText>
+						<DrawerText FontSize="14" Font="Time" MaxLength="200" Color="#000000">{description}...</DrawerText>
+
+					</DockPanel>
+					</Panel>
+
+				</Each>
+
+			</StackPanel>
+		</ScrollView>
+		</DockPanel>
+	</EdgeNavigator>
+</Page>

@@ -1,0 +1,50 @@
+<App Background="#ffffff">
+	<Font File="./fonts/agency.ttf" ux:Global="Agency" />
+	<Font File="./fonts/bord.ttf" ux:Global="Bord" />
+	<Font File="./fonts/gilsanub.ttf" ux:Global="Gilsanub" />
+	<Font File="./fonts/halbt.ttf" ux:Global="Halbt" />
+
+	<Font File="./fonts/af_aseer.ttf" ux:Global="Af_aseer" />
+	<Font File="./fonts/anastas.ttf" ux:Global="Anastas" />
+	<Font File="./fonts/candara.ttf" ux:Global="Candara" />
+	<Font File="./fonts/carmin.ttf" ux:Global="Carmine" />
+	<Font File="./fonts/dustin.ttf" ux:Global="Dustin" />
+	<Font File="./fonts/futr.ttf" ux:Global="Futr" />
+
+	<Font File="./fonts/futr1.ttf" ux:Global="Futr1" />
+	<Font File="./fonts/gara.ttf" ux:Global="Gara" />
+	<Font File="./fonts/hammer.ttf" ux:Global="Hammer" />
+	<Font File="./fonts/lith.ttf" ux:Global="Lith" />
+
+	<Font File="./fonts/lucon.ttf" ux:Global="Lucon" />
+	<Font File="./fonts/phinst.ttf" ux:Global="Phinst" />
+	<Font File="./fonts/revell.ttf" ux:Global="Revell" />
+	<Font File="./fonts/techb___.ttf" ux:Global="Techb" />
+
+	<Font File="./fonts/MankSans-Medium.ttf" ux:Global="Mank" />
+	<Font File="./fonts/MankSans-MediumOblique.ttf" ux:Global="MankI" />
+	<Font File="./fonts/MankSans.ttf" ux:Global="MankN" />
+	<Font File="./fonts/timeburnerbold.ttf" ux:Global="Time" />
+
+	<Font File="./fonts/Existence-Light.ttf" ux:Global="Existence" />
+	<Font File="./fonts/GeosansLight.ttf" ux:Global="GeoSans" />
+
+	
+
+
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#022328" />
+	<!-- the first step in using a router is to specify a router instance -->
+	<Router ux:Name="router" />
+	<!-- now that we have our router lets inject it into the home page  -->
+	<ClientPanel>
+		<Navigator DefaultPath="splash">
+			<SplashPage ux:Template="splash" router="router" />
+			<HomePage ux:Template="home" router="router" />
+			<JobPage ux:Template="job" router="router" />
+		</Navigator>
+	</ClientPanel>
+
+
+
+</App>

@@ -1,0 +1,3 @@
+<Page ux:Class="jobs.Page">
+	<Image Layer="Background" File="../Assets/background.jpg" StretchMode="Fill" Opacity=".6" />
+</Page>

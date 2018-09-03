@@ -1,0 +1,20 @@
+<Panel ux:Class="jobs.Button" Margin="10" Padding="10" FontSize="16">
+	<string ux:Property="Text" />
+	<float ux:Property="FontSize" />
+	<float4 ux:Property="Color" />
+
+	<Rectangle Layer="Background" Color="{ReadProperty Color}" Opacity=".6" CornerRadius="4" Width="220">
+	
+		<Stroke Width="1" Color="#ccc" />
+	</Rectangle>
+
+	<jobs.Text Value="{ReadProperty Text}" FontSize="{ReadProperty FontSize}" TextAlignment="Center" />
+
+	<WhilePressed>
+		<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+	</WhilePressed>
+
+	<WhileHovering>
+		<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+	</WhileHovering>
+</Panel>

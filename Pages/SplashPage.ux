@@ -1,0 +1,32 @@
+<jobs.Page ux:Class="SplashPage">
+	<Router ux:Dependency="router" />
+	<JavaScript File="SplashPage.js" />
+	<DockPanel ClipToBounds="true">		
+
+		<Grid RowCount="3">
+			<StackPanel Alignment="VerticalCenter"  ux:Name="loginArea">
+				<jobs.Text Alignment="HorizontalCenter" FontSize="70">MyJob</jobs.Text>
+				<jobs.Text Alignment="HorizontalCenter" Opacity=".5">Get A Job Today</jobs.Text>
+			</StackPanel>
+		<StackPanel Alignment="VerticalCenter" ItemSpacing="20">
+			<jobs.TextInput PlaceholderText="Username" Value="{username}" />
+			<jobs.TextInput PlaceholderText="Password" IsPassword="true" Value="{password}" />
+			<Grid ColumnCount="1">
+		<jobs.Button Text="SIGN IN" FontSize="14" Margin="20,5" Color="#0e6251" Alignment="VerticalCenter" Clicked="{saveUserDetails}"/>
+				
+		</Grid>
+	
+		</StackPanel>
+		<jobs.Text ux:Name="errorMessage" Margin="10,0,10,0" FontSize="13" Color="Red">{message}</jobs.Text>
+			<WhileKeyboardVisible>
+				<Move Target="errorMessage" Y="60" Duration=".1" Easing="ExponentialInOut"/>
+				<Move Target="loginArea" Y="-200" Duration=".6" Easing="ExponentialInOut"/>
+			</WhileKeyboardVisible>
+		</Grid>
+	
+		<Grid ColumnCount="2" Dock="Bottom">
+		<jobs.Text Alignment="HorizontalCenter" FontSize="13" Padding="5">Dont have an Account Yet?</jobs.Text>
+			<jobs.Text  FontSize="13" Color="Blue" >Register Now!</jobs.Text>
+		</Grid>
+</DockPanel>
+</jobs.Page>

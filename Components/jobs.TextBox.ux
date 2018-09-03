@@ -1,0 +1,6 @@
+<TextInput ux:Class="jobs.TextInput" FontSize="13" PlaceholderColor="#17202a" Padding="10" Alignment="Center">
+    <Rectangle Layer="Background"  CornerRadius="10" Height="45" Width="300">
+     <!--    <Stroke Width="1" Color="#ccc" /> -->
+        <SolidColor Color="#f8f9f9" Opacity="0.7" />
+    </Rectangle>
+</TextInput>
